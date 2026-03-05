@@ -25,14 +25,13 @@ export default function App() {
       className="min-h-screen bg-gradient-to-br from-[#e6f2fc] via-[#f0f8ff] to-[#e0f0fb] text-gray-800 relative overflow-hidden flex flex-col items-center justify-center p-4 sm:p-8"
       style={{ fontFamily: "'Noto Sans KR', sans-serif" }}
     >
-      {/* 로고 이미지 + AI Design Lab 텍스트 - 왼쪽 상단 고정 */}
-      <div className="fixed top-0 left-0 z-[100] flex items-center px-4 py-2 bg-gradient-to-r from-[#e6f2fc]/90 to-transparent">
+      <div className="fixed top-0 left-0 z-[100] flex items-center">
         <img
           src={`${import.meta.env.BASE_URL}logo.png`}
           alt="Logo"
-          className="w-12 h-12 md:w-14 md:h-14 object-contain"
+          className="w-28 h-28 md:w-32 md:h-32 object-contain"
         />
-        <span className="text-lg md:text-xl font-medium text-[#2d3748] tracking-tight ml-2">
+        <span className="text-xl md:text-2xl font-medium text-[#2d3748] tracking-tight -ml-4">
           AI Design Lab
         </span>
       </div>
@@ -58,11 +57,11 @@ export default function App() {
             <ChevronRight className="text-blue-500 opacity-0 group-hover:opacity-100 w-12 h-12 transition-opacity" />
           </div>
           <div 
-            className="absolute bottom-0 left-0 w-full h-16 cursor-pointer z-20 hover:bg-black/5 transition-colors flex items-center justify-center group"
+            className="absolute bottom-0 left-0 w-full h-16 cursor-pointer z-20 flex items-center justify-center"
             onClick={goToNext}
             title="다음 화면으로"
           >
-            <span className="text-blue-600 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">클릭하여 AI 구독 가이드 보기 ↓</span>
+            <span className="text-blue-600 font-semibold">클릭하여 AI 구독 가이드 보기 ↓</span>
           </div>
         </>
       )}
@@ -110,7 +109,7 @@ function Screen1({ onNext }) {
         <BenefitCard 
           label="SPECIAL BENEFIT 03"
           title="ACE 커뮤니티 입장 권한 제공"
-          desc="ACE들과 최신 AI지식을 공유 가능한<br/>AI디자인랩이 개설한 팀즈 채널에 참여하실 수 있습니다."
+          desc="ACE들과 최신 AI지식을 공유 할 수 있는<br/>ACE만의 팀즈 채널에 참여하실 수 있습니다."
           sub="실시간 정보 공유 및 협업 기회"
           Icon={Users}
         />
@@ -123,14 +122,13 @@ function Screen1({ onNext }) {
         />
       </div>
 
-      <button 
-        onClick={onNext}
-        className="bg-white px-8 py-4 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-blue-100 flex items-center gap-3 hover:scale-105 hover:shadow-lg transition-all cursor-pointer z-30 group"
+      <div 
+        className="bg-white px-8 py-4 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-blue-100 flex items-center gap-3"
       >
-        <span className="text-blue-500 text-xl group-hover:-translate-y-1 transition-transform">🚀</span>
-        <span className="font-bold text-[#1a365d] text-lg">앞으로의 ACE 활동을 진심으로 축하드립니다.</span>
-        <span className="text-blue-500 text-xl group-hover:-translate-y-1 transition-transform">🚀</span>
-      </button>
+        <span className="text-blue-500 text-xl">🚀</span>
+        <span className="font-bold text-[#1a365d] text-lg">ACE 활동을 진심으로 축하드립니다.</span>
+        <span className="text-blue-500 text-xl">🚀</span>
+      </div>
     </div>
   );
 }

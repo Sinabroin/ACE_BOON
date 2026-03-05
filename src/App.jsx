@@ -25,13 +25,14 @@ export default function App() {
       className="min-h-screen bg-gradient-to-br from-[#e6f2fc] via-[#f0f8ff] to-[#e0f0fb] text-gray-800 relative overflow-hidden flex flex-col items-center justify-center p-4 sm:p-8"
       style={{ fontFamily: "'Noto Sans KR', sans-serif" }}
     >
-      <div className="absolute top-2 left-8 md:top-3 md:left-12 z-[100] flex items-center">
+      {/* 로고 이미지 + AI Design Lab 텍스트 - 왼쪽 상단 고정 */}
+      <div className="fixed top-0 left-0 z-[100] flex items-center px-4 py-2 bg-gradient-to-r from-[#e6f2fc]/90 to-transparent">
         <img
           src={`${import.meta.env.BASE_URL}logo.png`}
           alt="Logo"
-          className="w-48 h-48 md:w-56 md:h-56 object-contain drop-shadow-sm"
+          className="w-12 h-12 md:w-14 md:h-14 object-contain"
         />
-        <span className="text-2xl md:text-3xl font-medium text-[#2d3748] tracking-tight -ml-14">
+        <span className="text-lg md:text-xl font-medium text-[#2d3748] tracking-tight ml-2">
           AI Design Lab
         </span>
       </div>

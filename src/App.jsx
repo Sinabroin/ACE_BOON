@@ -25,16 +25,21 @@ export default function App() {
       className="min-h-screen bg-gradient-to-br from-[#e6f2fc] via-[#f0f8ff] to-[#e0f0fb] text-gray-800 relative overflow-hidden flex flex-col items-center justify-center p-4 sm:p-8"
       style={{ fontFamily: "'Noto Sans KR', sans-serif" }}
     >
-      <div className="fixed top-0 left-0 z-[100] flex items-center">
+      <a 
+        href="https://o365hdec.sharepoint.com/sites/Playground/SitePages/%EC%98%A8%EB%B3%B4%EB%94%A9%ED%82%B7.aspx?csf=1&web=1&e=QEdPno&CID=18ef1d9d-212e-4346-8f69-fab2547de40b"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed top-0 left-0 z-[100] flex items-center cursor-pointer hover:opacity-80 transition-opacity"
+      >
         <img
           src={`${import.meta.env.BASE_URL}logo.png`}
           alt="Logo"
-          className="w-28 h-28 md:w-32 md:h-32 object-contain"
+          className="w-28 h-28 md:w-32 md:h-32 object-contain -mr-8"
         />
-        <span className="text-xl md:text-2xl font-medium text-[#2d3748] tracking-tight -ml-4">
+        <span className="text-xl md:text-2xl font-medium text-[#2d3748] tracking-tight">
           AI Design Lab
         </span>
-      </div>
+      </a>
 
       <div className="absolute top-[-10%] left-[-5%] w-[400px] h-[400px] bg-blue-300 rounded-full mix-blend-multiply filter blur-[100px] opacity-40"></div>
       <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-sky-200 rounded-full mix-blend-multiply filter blur-[120px] opacity-40"></div>

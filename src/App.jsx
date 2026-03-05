@@ -28,7 +28,7 @@ export default function App() {
       {/* 로고 이미지 + AI Design Lab 텍스트 */}
       <div className="absolute top-2 left-8 md:top-3 md:left-12 z-[100] flex items-center">
         <img
-          src="/logo.png"
+          src={`${import.meta.env.BASE_URL}logo.png`}
           alt="Logo"
           className="w-48 h-48 md:w-56 md:h-56 object-contain drop-shadow-sm"
         />
@@ -183,23 +183,23 @@ function Screen2({ onPrev }) {
       <div className="flex flex-col gap-6 mb-8">
         <ToolRowWithImage 
           name="Cursor Pro" type="필수" price="$20" desc="바이브 코딩 기반 개발 에디터"
-          Icon={Code2} imageUrl="/pricing-cursor.png" 
+          Icon={Code2} imageUrl={`${import.meta.env.BASE_URL}pricing-cursor.png`} 
         />
         <ToolRowWithImage 
           name="Genspark Plus" type="필수" price="$19.99" desc="지능형 검색 및 문서자료 생성"
-          Icon={Sparkles} imageUrl="/pricing-genspark.png" 
+          Icon={Sparkles} imageUrl={`${import.meta.env.BASE_URL}pricing-genspark.png`} 
         />
         <ToolRowWithImage 
           name="Claude Pro" type="선택" price="$17" desc="기획·문서·코드 생성 LLM (범용 AI 두뇌)"
-          Icon={MessageSquare} imageUrl="/pricing-claude.png" 
+          Icon={MessageSquare} imageUrl={`${import.meta.env.BASE_URL}pricing-claude.png`} 
         />
         <ToolRowWithImage 
           name="Lovable Pro" type="선택" price="$25" desc="노코드 대화형 웹/앱 개발"
-          Icon={LayoutTemplate} imageUrl="/pricing-lovable.png" 
+          Icon={LayoutTemplate} imageUrl={`${import.meta.env.BASE_URL}pricing-lovable.png`} 
         />
         <ToolRowWithImage 
           name="n8n Starter" type="선택" price="€24" desc="워크플로우 자동화 도구"
-          Icon={Workflow} imageUrl="/pricing-n8n.png" 
+          Icon={Workflow} imageUrl={`${import.meta.env.BASE_URL}pricing-n8n.png`} 
         />
       </div>
 
@@ -255,10 +255,4 @@ function ToolRowWithImage({ name, type, price, desc, Icon, imageUrl }) {
         <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none z-40">
           <span className="bg-white/90 backdrop-blur-sm text-gray-800 font-bold px-4 py-2 rounded-lg text-sm shadow-lg flex items-center gap-2">
             <Sparkles size={16} className="text-blue-500" />
-            {name} 요금제 화면
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-}
+            {name} 요금제 화<span class="cursor">█</span>
